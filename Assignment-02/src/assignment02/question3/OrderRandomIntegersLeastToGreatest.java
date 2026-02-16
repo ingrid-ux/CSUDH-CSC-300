@@ -1,4 +1,4 @@
-package assignment01.question3;
+package assignment02.question3;
 
 import java.util.*;
 import java.io.*;

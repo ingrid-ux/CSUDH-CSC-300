@@ -1,4 +1,4 @@
-package assignment01.question1;// Must invlude the following statement before the class statement
+package assignment02.question1;// Must invlude the following statement before the class statement
 
 import java.io.File;
 import java.io.IOException;

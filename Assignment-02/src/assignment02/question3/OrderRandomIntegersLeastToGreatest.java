@@ -56,13 +56,15 @@ public class OrderRandomIntegersLeastToGreatest{
         outputWriter.printf("Output Using ArrayList to String:\n");
         outputWriter.printf("%s\n", numberList);
 
-        // Create an iterator for the list
-        Iterator<Integer> iterOnNumbers = numberList.iterator();
+
 
         //Print out the list in order from least to greatest using the enhanced for.
         outputWriter.printf("\nUsing the Enhanced For loop:\n");
         for ( Integer nextNum : numberList )
             outputWriter.printf("%d ", nextNum);
+
+        // Create an iterator for the list
+        Iterator<Integer> iterOnNumbers = numberList.iterator();
 
         //Print out the list in order from least to greatest using an Iterator.
         outputWriter.printf("\nUsing the Iterator:\n");

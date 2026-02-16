@@ -30,7 +30,8 @@ public class Planet {
 
     Planet(String planetName){
         setPlanetName(planetName);
-        setPlanetTons();
+        int planetTons = randyPlanet.nextInt(10_000_000, 80_000_000);
+        setPlanetTons(planetTons);
     }
 
     /*
@@ -50,9 +51,8 @@ public class Planet {
         this.planetName = planetName;
     }
 
-    void setPlanetTons(){
-        this.planetTons = randyPlanet.nextInt(10_000_000, 80_000_000);
-
+    void setPlanetTons(int planetTons){
+        this.planetTons = planetTons;
     }
 
     // ** Accessors **
@@ -67,13 +67,23 @@ public class Planet {
         return this.planetTons;
     }
 
-
+    @Override
     public String toString(){
-        return String.format("The planet named %s weighs %d tons", planetName, planetTons);
+        return String.format("The planet named %s weighs %d tons\n", planetName, planetTons);
     }
 
-    boolean comparePlanets(Planet one, Planet two){
-        if(one == two){
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this){ return true; } // checking if same reference
+        if (obj == null){ return false; }
+        if (!(obj instanceof Planet)){ return false; } // checking if same class Planet
+
+        Planet other = (Planet) obj; // casting to planet
+        return this.planetName.equals(other.planetName) && this.planetTons == other.planetTons;
+    }
+
+    boolean comparePlanets(Planet planet1, Planet planet2){
+        if(planet1.equals(planet2)){
             return true;
         }
         else{

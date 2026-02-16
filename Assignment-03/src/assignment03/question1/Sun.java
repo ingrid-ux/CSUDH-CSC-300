@@ -53,8 +53,9 @@ public class Sun {
         return this.sunAge;
     }
 
+    @Override
     public String toString(){
-        return String.format("The sun named %s is %d years old", sunName, sunAge);
+        return String.format("The sun named %s is %d years old\n", sunName, sunAge);
     }
 
 }

@@ -1,3 +1,5 @@
+package assignment01.question2;
+
 import java.util.*;
 import java.io.*;
 
@@ -32,8 +34,6 @@ public class PopulationData {
             System.out.printf("%s\n", n);
         }
         */
-
-
 
     }
 

@@ -23,7 +23,7 @@ public class PopulationData {
         int lowestIndex = getLowestIndex(numList);
         int lowestPopulationChange = lowestIndex + YEAR_START;
 
-        System.out.printf("The average annual change in population from %d through %d was  %.2f\n",YEAR_START, YEAR_END, averageChange);
+        System.out.printf("The average annual change in population from %d through %d was %.2f\n",YEAR_START, YEAR_END, averageChange);
         System.out.printf("The year with the greatest increase in population from %d through %d was %d\n",YEAR_START, YEAR_END, greatestPopulationChange);
         System.out.printf("The year with the smallest increase in population from %d through %d was %d",YEAR_START, YEAR_END, lowestPopulationChange);
 

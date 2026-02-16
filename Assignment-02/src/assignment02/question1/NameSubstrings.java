@@ -22,7 +22,7 @@ public class NameSubstrings {
 
         }
 
-        System.out.printf("Please enter the name of the output file: ");
+        System.out.printf("Please enter the name of the output file: "); // *** output file should be named as last_names_output.txt
         String outputFileName = keyboard.next();
         File outputFile = new File(outputFileName); //Creating the file object
         PrintWriter output = new PrintWriter(outputFile); // output file is a reference variable for a new object of type printWriter

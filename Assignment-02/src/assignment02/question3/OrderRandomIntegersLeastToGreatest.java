@@ -47,7 +47,7 @@ public class OrderRandomIntegersLeastToGreatest{
         }
 
         //Request the name of an output file via the terminal and create a PrintWriter to that file
-        System.out.printf("Please enter the name of the output file: ");
+        System.out.printf("Please enter the name of the output file: "); // ** output file should be named randomintsordered.txt
         String outputFileName = keyboard.next();
         File outputFile = new File(outputFileName);
         PrintWriter outputWriter = new PrintWriter(outputFile);

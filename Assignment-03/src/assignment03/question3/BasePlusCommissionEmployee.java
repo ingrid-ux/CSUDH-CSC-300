@@ -12,6 +12,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
         if(baseSalary < 0){
             throw new IllegalArgumentException("Base salary must be >= 0.0");
         }
+        this.baseSalary = baseSalary;
     }
 
     double getBaseSalary(){
@@ -25,25 +26,28 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
 
     @Override
     public String toString(){
-        return String.format("%s", earnings());
+        return String.format(
+                "%s  Base Salary: $%,.2f  Total Earnings: $%,.2f",
+                super.toString(),
+                getBaseSalary(),
+                earnings()
+        );
     }
 
-    /*
-       * BasePlusCommissionEmployee (25)
-       * This class extends CommissionEmployee
-       * Has an additional instance variable:
-       * private double baseSalary
-       * Has a constructor which accepts the values for the 4 instance variables of CommissionEmployee
-       * and an additional parameter with a value for baseSalary.
-       * The constructor calls super with appropriate values and then calls setBaseSalary.
-       * The setBaseSalary mutator will throw new IllegalArgumentException("Base salary must be >=
-       * 0.0") if the baseSalary is negative.
-       * Has an earnings() method that overrides earning and calculates the earnings with as the sum of
-       * the baseSalary and super.earnings()
-       * An overridden to String() method that returns a String that includes the baseEarnings.
-     */
-
-
-
-
 }
+
+/*
+ * BasePlusCommissionEmployee (25)
+ * This class extends CommissionEmployee
+ * Has an additional instance variable:
+ * private double baseSalary
+ * Has a constructor which accepts the values for the 4 instance variables of CommissionEmployee
+ * and an additional parameter with a value for baseSalary.
+ * The constructor calls super with appropriate values and then calls setBaseSalary.
+ * The setBaseSalary mutator will throw new IllegalArgumentException("Base salary must be >=
+ * 0.0") if the baseSalary is negative.
+ * Has an earnings() method that overrides earning and calculates the earnings with as the sum of
+ * the baseSalary and super.earnings()
+ * An overridden to String() method that returns a String that includes the baseEarnings.
+ */
+

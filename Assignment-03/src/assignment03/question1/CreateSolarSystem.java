@@ -4,24 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class CreateSolarSystem {
-    /*
-    * Has a main method only.
-    * Creates a Scanner to read from the keyboard
-    * Reads in the name of the SolarSystem and the name of the Sun
-    * Create a new SolarSystem with the SolarSystem name and Sun name.
-    * Print out the SolarSystem
-    * *
-    * If there is more than one planet
-    * Compare each planet (except the first planet) to the first planet in the queue.
-    * *
-        * If any planet equals the first planet print it out otherwise print:
-        * There is no planet that matches the first planet
-        * Then set the name and tonnage of the last planet to the first planet
-        * Then see if the two planets are equal and print as follows:
-        * The planet named Mercury weighs 75,504,385 tons equals the first planet in the ArrayList
-    * else
-    * Print There are no planets to compare
-     */
+
     public static void main(String[] args) throws IOException {
 
         Scanner keyboard = new Scanner(System.in);
@@ -63,3 +46,22 @@ public class CreateSolarSystem {
     }
 
 }
+
+/*
+ * Has a main method only.
+ * Creates a Scanner to read from the keyboard
+ * Reads in the name of the SolarSystem and the name of the Sun
+ * Create a new SolarSystem with the SolarSystem name and Sun name.
+ * Print out the SolarSystem
+ * *
+ * If there is more than one planet
+ * Compare each planet (except the first planet) to the first planet in the queue.
+ * *
+ * If any planet equals the first planet print it out otherwise print:
+ * There is no planet that matches the first planet
+ * Then set the name and tonnage of the last planet to the first planet
+ * Then see if the two planets are equal and print as follows:
+ * The planet named Mercury weighs 75,504,385 tons equals the first planet in the ArrayList
+ * else
+ * Print There are no planets to compare
+ */

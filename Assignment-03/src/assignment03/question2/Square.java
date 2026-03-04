@@ -11,6 +11,7 @@ public class Square extends Rectangle {
      */
     @Override
     public String toString(){
-        return String.format("\nCoordinates of Rectangle are %s, %s, %s, %s\nSide is: %.2f Area is %.2f",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString(),getHeight(),getArea() );
+        return String.format("Coordinates of square are %s, %s, %s, %s\nSide is %.2f  Area is: %.2f\n",
+                getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString(),getWidth(),getArea() );
     }
 }

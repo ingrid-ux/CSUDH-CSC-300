@@ -6,7 +6,7 @@ public class CommissionEmployee {
     private double grossSales;
     private double commissionPercent; // As a percentage
 
-    CommissionEmployee(String firstName, String lastName, double grossSales, double commissionPercent){
+    public CommissionEmployee(String firstName, String lastName, double grossSales, double commissionPercent){
         this.firstName = firstName;
         this.lastName = lastName;
         setGrossSales(grossSales);
@@ -14,33 +14,33 @@ public class CommissionEmployee {
 
     }
 
-    void setGrossSales(double grossSales){
+    public void setGrossSales(double grossSales){
         if(grossSales < 0.0){
             throw new IllegalArgumentException("Gross sales must be >= 0.0");
         }
         this.grossSales = grossSales;
     }
-    void setCommissionPercent(double commissionPercent){
+    public void setCommissionPercent(double commissionPercent){
         if(commissionPercent < 0.0 || commissionPercent > 100.0){
             throw new IllegalArgumentException( "Commission rate must be >= 0.0 and <= 100.0");
         }
         this.commissionPercent = commissionPercent;
     }
 
-    double getGrossSales(){
+    public double getGrossSales(){
         return this.grossSales;
     }
-    double getCommissionPercent(){
+    public double getCommissionPercent(){
         return this.commissionPercent;
     }
-    String getFirstName(){
+    public String getFirstName(){
         return this.firstName;
     }
-    String getLastName(){
+    public String getLastName(){
         return this.lastName;
     }
 
-    double earnings(){
+    public double earnings(){
         return getGrossSales() * (getCommissionPercent() / 100.0);
     }
 

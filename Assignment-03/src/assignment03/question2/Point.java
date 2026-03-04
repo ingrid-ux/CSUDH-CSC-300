@@ -7,13 +7,14 @@ public class Point {
         * Includes a default constructor and a constructor with an x and y coordinate.
         * The toString method returns a String with the points in the format (x,y)
      */
-    double x,y;
+    private double x;
+    private double y;
 
-    void setX(double x){this.x = x;}
-    void setY(double y){this.y = y;}
+    public void setX(double x){this.x = x;}
+    public void setY(double y){this.y = y;}
 
-    double getX(){return this.x;}
-    double getY(){return this.y;}
+    public double getX(){return this.x;}
+    public double getY(){return this.y;}
 
     // ** Default Constructor
     Point(){

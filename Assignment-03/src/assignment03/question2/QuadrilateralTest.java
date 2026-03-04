@@ -31,7 +31,7 @@ public class QuadrilateralTest  {
       //System.out.printf(square.toString());
 
       System.out.printf(
-         "%s %s %s %s %s\n", quadrilateral, trapezoid, parallelogram, 
+         "%s\n  %s\n %s\n %s\n %s\n", quadrilateral, trapezoid, parallelogram,
          rectangle, square);
 
    } 

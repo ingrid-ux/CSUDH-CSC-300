@@ -10,10 +10,10 @@ public class Quadrilateral {
      * Create a toString method which returns a String with the four coordinates pairs in a printable
      * form as shown in the sample output.
      */
-    Point Point1;
-    Point Point2;
-    Point Point3;
-    Point Point4;
+    private Point Point1;
+    private Point Point2;
+    private Point Point3;
+    private Point Point4;
 
     Quadrilateral(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
         Point1 = new Point(x1, y1);
@@ -22,18 +22,18 @@ public class Quadrilateral {
         Point4 = new Point(x4, y4);
     }
 
-    Point getPoint1(){ return Point1; }
-    Point getPoint2(){ return Point2; }
-    Point getPoint3(){ return Point3; }
-    Point getPoint4(){ return Point4; }
+    public Point getPoint1(){ return Point1; }
+    public Point getPoint2(){ return Point2; }
+    public Point getPoint3(){ return Point3; }
+    public Point getPoint4(){ return Point4; }
 
     String returnCoordsAsString(){
-        return String.format("%s %s %s %s",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString() );
+        return String.format("%s, %s, %s, %s",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString() );
     }
 
     @Override
     public String toString(){
         //Coordinates of quadrilateral are (1.10, 1.20), (6.60, 2.80), (6.20, 9.90), (2.20, 7.40)
-        return String.format("Coordinates of quadrilateral are %s, %s, %s, %s",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString() );
+        return String.format("Coordinates of quadrilateral are %s, %s, %s, %s\n",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString() );
     }
 }

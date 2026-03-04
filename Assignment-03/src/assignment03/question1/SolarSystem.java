@@ -16,9 +16,9 @@ public class SolarSystem {
      *   An ArrayList containing references to Planet objects named planetList
     */
 
-    String solSystemName;
-    Sun sol;
-    ArrayList<Planet> planetList = new ArrayList<Planet>();
+    private String solSystemName;
+    private Sun sol;
+    private ArrayList<Planet> planetList = new ArrayList<Planet>();
 
     /*
      ** Default Constructor
@@ -56,12 +56,12 @@ public class SolarSystem {
     */
 
     // ** Mutator
-    void setSolarSystemName(String solSystemName){
+    public void setSolarSystemName(String solSystemName){
         this.solSystemName = solSystemName;
     }
 
     // ** Accessor
-    String getSolSystemName(){ return solSystemName; }
+    public String getSolSystemName(){ return solSystemName; }
 
     @Override
     public String toString() {
@@ -82,7 +82,7 @@ public class SolarSystem {
         * Creates a Scanner for the planet name’s file.
         * For each planet name in the file create a Planet and add it to the planetList.
     */
-    void createPlanets() throws IOException {
+    public void createPlanets() throws IOException {
         Scanner keyboard = new Scanner(System.in);
         System.out.printf("Please enter the name of the file to read in data from: ");
         String inputFileName = keyboard.next();
@@ -95,11 +95,7 @@ public class SolarSystem {
 
         }
 
-        // **** Using an iterator
         Scanner inputReader = new Scanner(inputFile);
-
-        // Create an iterator for the Planet list
-        Iterator<Planet> iterOnPlanets = planetList.iterator();
 
         while (inputReader.hasNext() ) { //doesn't move the pointer
             Planet p = new Planet(inputReader.next());
@@ -111,7 +107,7 @@ public class SolarSystem {
     * The getNumPlanets method with no parameters which return the size of the planetList.
     */
 
-    int getNumPlanets(){ return planetList.size(); }
+    public int getNumPlanets(){ return planetList.size(); }
 
     /*
     * The getPlanet method which accepts an int index as a parameter and returns null or a reference to a Planet as follows:
@@ -121,8 +117,8 @@ public class SolarSystem {
         * Otherwise return reference to the planet at the index.
     */
 
-    Planet getPlanet(int index){
-        if (index < 0 || index > getNumPlanets()){
+    public Planet getPlanet(int index){
+        if (index < 0 || index >= getNumPlanets()){
             System.out.printf("Planet doesn't exist");
             return null;
         }

@@ -11,10 +11,10 @@ public class BasePlusCommissionEmployeeTest {
         ArrayList<CommissionEmployee> commOnlyEmp = new ArrayList<CommissionEmployee>();
         ArrayList<BasePlusCommissionEmployee> basePlusCommEmp = new ArrayList<BasePlusCommissionEmployee>();
 
-        //System.out.printf("Please enter the name of the input file with Commission Only Salespersons Data: ");
+        System.out.printf("Please enter the name of the input file with Commission Only Salespersons Data: ");
         Scanner keyboard = new Scanner(System.in);
-        String inputFileName = "data/commemp.txt";
-        //String inputFileName = keyboard.next();
+        //String inputFileName = "data/commemp.txt";
+        String inputFileName = keyboard.next();
         File inputFile = new File(inputFileName);
         if(!inputFile.exists()){
             System.out.printf("Error: %s not found.\n", inputFileName);
@@ -23,6 +23,7 @@ public class BasePlusCommissionEmployeeTest {
         Scanner inputReader = new Scanner(inputFile);
 
         //String firstName, String lastName, double grossSales, double commissionPercent
+        /*
         while (inputReader.hasNextLine()) {
             String[] values = inputReader.nextLine().split(" ");
             //System.out.printf("\n"+value);
@@ -35,13 +36,24 @@ public class BasePlusCommissionEmployeeTest {
                 commOnlyEmp.add(new CommissionEmployee(firstName, lastName, grossSales, commissionPercent));
             }
 
-        } inputReader.close();
+        } */
+        while (inputReader.hasNext()) {
+
+            String firstName = inputReader.next();
+            String lastName = inputReader.next();
+            double grossSales = inputReader.nextDouble();
+            double commissionPercent = inputReader.nextDouble();
+
+            commOnlyEmp.add(
+                    new CommissionEmployee(firstName, lastName, grossSales, commissionPercent)
+            );
+        }inputReader.close();
 
 
-        //System.out.printf("Please enter the name of the input file with Base Plus Commission Salespersons: ");
-        keyboard = new Scanner(System.in);
-        //inputFileName = keyboard.next();
-        inputFileName = "data/baseplusemp.txt";
+        System.out.printf("Please enter the name of the input file with Base Plus Commission Salespersons: ");
+        //keyboard = new Scanner(System.in);
+        inputFileName = keyboard.next();
+        //inputFileName = "data/baseplusemp.txt";
         inputFile = new File(inputFileName);
         if(!inputFile.exists()){
             System.out.printf("Error: %s not found.\n", inputFileName);
@@ -67,10 +79,10 @@ public class BasePlusCommissionEmployeeTest {
         } inputReader.close();
 
 
-       // System.out.printf("Please enter the name of the output file: "); // ** output file should be named salarystats.txt
-        //String outputFileName = keyboard.next();
-        //File outputFile = new File(outputFileName);
-        File outputFile = new File("yip");
+        System.out.printf("Please enter the name of the output file: "); // ** output file should be named salarystats.txt
+        String outputFileName = keyboard.next();
+        File outputFile = new File(outputFileName);
+        //File outputFile = new File("yip");
         PrintWriter outputWriter = new PrintWriter(outputFile);
 
 
@@ -99,7 +111,7 @@ public class BasePlusCommissionEmployeeTest {
             outputWriter.printf("%-15s%-20s$%,-15.2f\n", employee.getFirstName(), employee.getLastName(), employee.earnings());
             basePlusTotal += employee.earnings();
         }
-        outputWriter.printf("Total Compensation For Commission Only Employees Is: $%.2f", basePlusTotal);
+        outputWriter.printf("Total Compensation For Base Pay Plus Commission Employees Is: $%.2f", basePlusTotal);
         outputWriter.printf("\n\n");
         double totalComAllEmployees = basePlusTotal + comOnlytotal;
 

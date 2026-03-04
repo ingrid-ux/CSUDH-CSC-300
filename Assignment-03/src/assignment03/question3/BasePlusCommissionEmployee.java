@@ -8,19 +8,19 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
         setBaseSalary(baseSalary);
     }
 
-    void setBaseSalary(double baseSalary) {
+    public void setBaseSalary(double baseSalary) {
         if(baseSalary < 0){
             throw new IllegalArgumentException("Base salary must be >= 0.0");
         }
         this.baseSalary = baseSalary;
     }
 
-    double getBaseSalary(){
+    public double getBaseSalary(){
         return this.baseSalary;
     }
 
     @Override
-    double earnings(){
+    public double earnings(){
         return getBaseSalary() + super.earnings();
     }
 

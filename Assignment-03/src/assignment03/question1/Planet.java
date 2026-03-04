@@ -8,9 +8,9 @@ public class Planet {
     // - String planetName – the name of the Planet
     // - int planetTons – the weight of the planet in tons
 
-    static Random randyPlanet = new Random(11);
-    String planetName;
-    int planetTons;
+    private static Random randyPlanet = new Random(11);
+    private String planetName;
+    private int planetTons;
 
     // - A constructor with the Planet’s name as an input variable which:
 
@@ -19,7 +19,7 @@ public class Planet {
     // - Default constructor sets the planetName to “unknown” by calling the mutator method for the variable
 
     Planet() {
-        this.planetName = "unknown";
+        setPlanetName("unknown");
     }
 
     // ** Constructor **
@@ -47,11 +47,11 @@ public class Planet {
     // - setPlanetTons
 
 
-    void setPlanetName(String planetName){
+    public void setPlanetName(String planetName){
         this.planetName = planetName;
     }
 
-    void setPlanetTons(int planetTons){
+    public void setPlanetTons(int planetTons){
         this.planetTons = planetTons;
     }
 
@@ -59,17 +59,17 @@ public class Planet {
     // - getPlanetName
     // - getPlanetTons
 
-    String getPlanetName(){
+    public String getPlanetName(){
         return this.planetName;
     }
 
-    int getPlanetTons(){
+    public int getPlanetTons(){
         return this.planetTons;
     }
 
     @Override
     public String toString(){
-        return String.format("The planet named %s weighs %d tons\n", planetName, planetTons);
+        return String.format("The planet named %s weighs %,d tons\n", planetName, planetTons);
     }
 
     @Override
@@ -82,6 +82,7 @@ public class Planet {
         return this.planetName.equals(other.planetName) && this.planetTons == other.planetTons;
     }
 
+    /*
     boolean comparePlanets(Planet planet1, Planet planet2){
         if(planet1.equals(planet2)){
             return true;
@@ -90,6 +91,6 @@ public class Planet {
             return false;
         }
     }
-
+    */
 
 }

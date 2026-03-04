@@ -35,7 +35,7 @@ public class CreateSolarSystem {
             lastPlanet.setPlanetTons(firstPlanet.getPlanetTons());
 
             if (lastPlanet.equals(firstPlanet)) {
-                System.out.printf("%s\n and equals the first planet in the ArrayList", lastPlanet.toString());
+                System.out.printf("%sand equals the first planet in the ArrayList\n", lastPlanet.toString());
             }
 
         }

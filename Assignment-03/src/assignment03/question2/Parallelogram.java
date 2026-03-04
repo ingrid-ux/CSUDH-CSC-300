@@ -36,7 +36,11 @@ public class Parallelogram extends Trapezoid {
 
     @Override
     public String toString(){
-        return String.format("Coordinates of parallelogram are %s, %s, %s, %s\nWidth is: %.2f Height is: %.2f Area is %.2f",getPoint1().toString(),getPoint2().toString(),getPoint3().toString(),getPoint4().toString(),getWidth(),getHeight(),getArea() );
+        return String.format(
+                "Coordinates of parallelogram are %s, %s, %s, %s\n" +
+                "Width is %.2f Height is %.2f  Area is: %.2f\n",
+                getPoint1().toString(), getPoint2().toString(), getPoint3().toString(),
+                getPoint4().toString(),getWidth(),getHeight(),getArea() );
     }
 
 }

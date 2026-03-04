@@ -4,16 +4,16 @@ import java.util.Random;
 
 public class Sun {
     // Has three instance variables
-    String sunName; // name of the sunName
-    int sunAge; // Age of the sunAge
-    long seed = 6; // A random variable called randy with a seed of 6
-    Random randy = new Random(seed);
+    private String sunName; // name of the sunName
+    private int sunAge; // Age of the sunAge
+    private Random randy = new Random(6);// A random variable called randy with a seed of 6
 
 
     // ** Default Constructor **
     //   - sets the sunName to “unknown” by calling the mutator method for the variable
     Sun() {
-        sunName = "unknown";
+        setSunName("unknown");
+        setSunAge(randy.nextInt(1_000_000_000, 2_000_000_000));
     }
 
     // ** Constructor **
@@ -23,7 +23,7 @@ public class Sun {
     //   -  two billion years, inclusively using randy
     Sun(String sunName) {
         setSunName(sunName);
-        setSunAge();
+        setSunAge(randy.nextInt(1_000_000_000, 2_000_000_000));
     }
 
 
@@ -33,23 +33,22 @@ public class Sun {
     // Mutators
     // - setSunName
     // - setSunAge
-    void setSunName(String sunName) {
+    public void setSunName(String sunName) {
         this.sunName = sunName;
     }
 
-    void setSunAge() {
-
-        this.sunAge = randy.nextInt(1_000_000_000, 2_000_000_000);
+    public void setSunAge(int sunAge) {
+        this.sunAge = sunAge;
     }
 
     // Accessors
     // - getSunName
     // - getSunAge
-    String getSunName(){
+    public String getSunName(){
         return this.sunName;
     }
 
-    int getSunAge(){
+    public int getSunAge(){
         return this.sunAge;
     }
 

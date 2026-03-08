@@ -2,6 +2,9 @@ package question1;
 
 public class AllInclusiveVacation extends Vacation{
 
+    private String brand;
+    private int rating;
+    private double price;
 
     AllInclusiveVacation(String destination, double budget, String brand, int rating, double price) {
         super(destination, budget);
@@ -15,9 +18,7 @@ public class AllInclusiveVacation extends Vacation{
         return price - getBudget();
     }
 
-    private String brand;
-    private int rating;
-    private double price;
+
 
     public void setBrand(String brand) {
         this.brand = brand;
@@ -31,7 +32,7 @@ public class AllInclusiveVacation extends Vacation{
         if(rating >= 1 && rating <= 5) {
             this.rating = rating;
         } else {
-            throw new IllegalArgumentException("Rating must be >= 0.0");
+            throw new IllegalArgumentException("Rating must be > 0 and <= 5");
         }
     }
 
@@ -53,7 +54,7 @@ public class AllInclusiveVacation extends Vacation{
 
     @Override
     public String toString(){
-        return String.format("%s%nBrand: %s; Rating: %d; Price: $%.2f ",
+        return String.format("%s%nBrand: %s; Rating: %d; Price: $%.2f",
                 super.toString(), brand, rating, price);
     }
 
@@ -70,7 +71,7 @@ public class AllInclusiveVacation extends Vacation{
         AllInclusiveVacation other = (AllInclusiveVacation) obj;
         boolean brandEquals = this.brand.equalsIgnoreCase((other.brand));
         boolean ratingEquals = this.rating == other.rating;
-        boolean priceEquals = Math.abs(this.price - other.price) < 0.001;
+        boolean priceEquals = Math.abs(this.price - other.price) < 0.0001;
 
         return brandEquals && ratingEquals && priceEquals;
     }

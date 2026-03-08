@@ -100,19 +100,18 @@ public class Supermarket {
 
         } // end of while loop
 
-
-
     }
 
-    public void generateSupermarketResults(String inputFileName)
-            throws IOException {
+    public void generateSupermarketResults(String inputFileName) throws IOException {
 
 
         PrintWriter output = new PrintWriter(inputFileName);
 
-        output.printf("%-15s %-8s %-8s %-10s %-12s %-12s%n",
-                "ShopperID", "Start", "End",
-                "Shopping", "Checkout", "Total");
+        output.printf("Data for Supermarket %s%n", superName);
+
+        output.printf("%-15s %-15s %-15s %-15s %-15s %-15s%n",
+                "Shopper ID", "Start Time", "End Time",
+                "Time Shopping", "Checkout Time", "Time In Store");
 
         double bigTotal = 0;
         double fastTotal = 0;
@@ -125,11 +124,11 @@ public class Supermarket {
 
             Shopper s = iterator.next();
             output.println(s.toString());
-
+            // FOR BIGSHOPPER OBJECTS
             if (s instanceof BigShopper) {
                 bigTotal += s.getTotalTimeCheckingOut();
                 bigCount++;
-            } else {
+            } else { // FOR FASTSHOPPER OBJECTS
                 fastTotal += s.getTotalTimeCheckingOut();
                 fastCount++;
             }
@@ -140,10 +139,8 @@ public class Supermarket {
         double fastAverage = (fastCount == 0) ? 0 : fastTotal / fastCount;
 
         output.println();
-        output.printf("Average BigShopper Checkout Time: %.2f%n",
-                bigAverage);
-        output.printf("Average FastShopper Checkout Time: %.2f%n",
-                fastAverage);
+        output.printf("The average time checking out on the Big Queue for %d Shoppers is $%.2f minutes%n",bigCount, bigAverage);
+        output.printf("The average time checking out on the Fast Queue for %d Shoppers is $%.2f minutes",fastCount, fastAverage);
 
         output.close();
     }

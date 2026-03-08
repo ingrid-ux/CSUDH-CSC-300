@@ -113,7 +113,7 @@ public class BigShopper extends Shopper {
     @Override
     public String toString() {
         return String.format(
-                "%s | Start: %d | End: %d | Shopping: %d | Checkout: %d | Total: %d",
+                "%-15s %-15d %-15d %-15d %-15d %-15d",
                 bigShopperID,
                 startTime,
                 endTime,

@@ -1,4 +1,4 @@
-package Lesson_6.Generics;
+package Lesson_6.a_Generics;
 
 //Modified from Copyright (c) 1995, 2008, Oracle
 public class Box<T> 

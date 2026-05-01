@@ -1,0 +1,60 @@
+Simulation Results
+Simulation with 6 printers lasted 4220 seconds and processed 45 jobs
+The average time in the wait queue for a job is 47.22 seconds
+
+Printer Statistics
+Name       Jobs Processed  Time In Use Time Idle 
+Printer0   10              3472       748       
+Printer1   8               3577       643       
+Printer2   6               4028       192       
+Printer3   9               3290       930       
+Printer4   6               3252       968       
+Printer5   6               3178       1042      
+
+Job Statistics
+Job No.  Priority   Wait Time  Length of Job  
+7        1          0          179            
+14       1          37         302            
+13       1          41         684            
+36       1          0          404            
+23       1          31         149            
+21       1          3          396            
+19       1          35         75             
+35       2          0          686            
+3        2          0          862            
+44       2          11         983            
+20       2          35         43             
+1        3          0          583            
+41       3          27         513            
+17       3          114        562            
+28       3          119        121            
+26       3          1          633            
+34       4          0          556            
+27       4          0          194            
+4        4          0          54             
+9        4          0          785            
+24       4          0          703            
+15       5          0          295            
+45       5          129        268            
+5        6          0          241            
+42       6          41         17             
+39       6          179        874            
+40       7          106        398            
+29       7          165        51             
+22       8          50         56             
+6        8          0          647            
+10       8          0          146            
+43       9          0          472            
+33       9          0          716            
+12       9          0          872            
+2        9          0          866            
+32       9          3          312            
+11       10         8          777            
+18       10         70         983            
+30       10         138        18             
+38       10         260        680            
+37       11         0          335            
+25       11         30         600            
+31       11         66         711            
+16       11         410        778            
+8        11         16         217            

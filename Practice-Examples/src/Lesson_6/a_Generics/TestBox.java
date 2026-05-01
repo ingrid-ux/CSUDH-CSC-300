@@ -1,5 +1,5 @@
 
-package Lesson_6.Generics;
+package Lesson_6.a_Generics;
 
 public class TestBox
 {

@@ -1,6 +1,8 @@
+package question3;
 
-import java.sql.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Pet {
 

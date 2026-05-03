@@ -1,0 +1,56 @@
+public class Advisor {
+    public static int advisorCounter = 0;
+
+    private boolean isFree;
+    private int advisorIDNumber;
+    private int totalStudentsSeenByAdvisor;
+    private int timeRemainingForMeeting;
+    private Student assignedStudent;
+
+    public Advisor() {
+        setAdvisorIDNumber();
+        setIsFree(true);
+    }
+
+    // Accessors
+    public void setIsFree(boolean isFree) {
+        this.isFree = isFree;
+    }
+
+    public void setAdvisorIDNumber() {
+        advisorCounter++;
+        advisorIDNumber = advisorCounter;
+    }
+
+    public void setTotalStudentsSeenByAdvisor(int totalStudentsSeenByAdvisor) {
+        this.totalStudentsSeenByAdvisor = totalStudentsSeenByAdvisor;
+    }
+
+    public void setTimeRemainingForMeeting(int timeRemainingForMeeting) {
+        this.timeRemainingForMeeting = timeRemainingForMeeting;
+    }
+
+    public void setAssignedStudent(Student assignedStudent) {
+        this.assignedStudent = assignedStudent;
+        setIsFree(false);
+    }
+
+    public Student removeAssignedStudent(){
+        Student tempStudent = assignedStudent;
+        assignedStudent = null;
+        setIsFree(true);
+        totalStudentsSeenByAdvisor++;
+        return tempStudent;
+    }
+
+    public void decrementTimeRemainingForMeeting(){
+        timeRemainingForMeeting--;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Advisor %d advises %d students%n",advisorIDNumber,totalStudentsSeenByAdvisor);
+    }
+
+
+}

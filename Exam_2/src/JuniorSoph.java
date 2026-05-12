@@ -3,7 +3,7 @@ public class JuniorSoph extends Student {
     private String studentID;
     JuniorSoph(int arrivalTime, AdvisingType advT){
         super(arrivalTime);
-        setStudentType("JuniorSoph");
+        setStudentType("JuniorSoph ");
         setAdvisingType(advT);
         setStudentID();
     }
@@ -11,7 +11,7 @@ public class JuniorSoph extends Student {
     @Override
     public void setStudentID() {
         idCounter++;
-        studentID = "CSUDH " + getStudentType() + " " +  Student.idCounter;
+        studentID = "CSUDH " + getStudentType() + Student.idCounter;
     }
 
     @Override

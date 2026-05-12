@@ -3,7 +3,7 @@ public class FullTimeAdvising extends AdvisingType {
     private String advisingNumber;
 
     FullTimeAdvising(){
-        super("Full Time");
+        super("FullTime");
         setAdvisingNumber();
     }
 

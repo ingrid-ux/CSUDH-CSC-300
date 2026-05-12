@@ -3,7 +3,7 @@ public class Freshman extends Student{
 
     Freshman(int arrivalTime, AdvisingType advT){
         super(arrivalTime);
-        setStudentType("Freshman");
+        setStudentType("Freshman ");
         setAdvisingType(advT);
         setStudentID();
 
@@ -13,7 +13,7 @@ public class Freshman extends Student{
     @Override
     public void setStudentID() {
         idCounter++;
-        studentID = "CSUDH " + getStudentType() + " " + Student.idCounter;
+        studentID = "CSUDH " + getStudentType() +  Student.idCounter;
     }
 
     @Override

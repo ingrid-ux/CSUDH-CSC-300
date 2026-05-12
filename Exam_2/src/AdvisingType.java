@@ -1,7 +1,7 @@
 abstract class AdvisingType {
    private String advisingType;
 
-   AdvisingType(String advisingType){
+   public AdvisingType(String advisingType){
        setAdvisingType(advisingType);
    }
 

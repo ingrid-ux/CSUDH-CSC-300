@@ -4,7 +4,7 @@ public class PartTimeAdvising extends AdvisingType {
     private String advisingNumber;
 
     PartTimeAdvising() {
-        super("PartTime");
+        super("PartTime ");
         setAdvisingNumber();
     }
 
@@ -12,7 +12,7 @@ public class PartTimeAdvising extends AdvisingType {
     @Override
     void setAdvisingNumber() {
         partTimeCounter++;
-        this.advisingNumber = "PartTime " + "partTimeCounter";
+        this.advisingNumber = "PartTime " + partTimeCounter;
     }
 
     @Override

@@ -13,6 +13,29 @@ public class Advisor {
     }
 
     // Accessors
+
+    public int getTimeRemainingForMeeting(){
+        return timeRemainingForMeeting;
+    }
+
+    public boolean getIsFree(){
+        return isFree;
+    }
+
+    public int getAdvisorIDNumber() {
+        return advisorIDNumber;
+    }
+
+    public Student getAssignedStudent() {
+        return assignedStudent;
+    }
+
+    public int getTotalStudentsSeenByAdvisor() {
+        return totalStudentsSeenByAdvisor;
+    }
+
+    // Mutators
+
     public void setIsFree(boolean isFree) {
         this.isFree = isFree;
     }
@@ -20,10 +43,6 @@ public class Advisor {
     public void setAdvisorIDNumber() {
         advisorCounter++;
         advisorIDNumber = advisorCounter;
-    }
-
-    public void setTotalStudentsSeenByAdvisor(int totalStudentsSeenByAdvisor) {
-        this.totalStudentsSeenByAdvisor = totalStudentsSeenByAdvisor;
     }
 
     public void setTimeRemainingForMeeting(int timeRemainingForMeeting) {

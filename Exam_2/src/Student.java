@@ -20,7 +20,7 @@ abstract class Student implements Comparable<Student>{
 
     // Mutators
 
-    Student(int arrivalTime){
+    public Student(int arrivalTime){
         setArrivalTimeAtAdvisingCenter(arrivalTime);
     }
 
@@ -33,9 +33,6 @@ abstract class Student implements Comparable<Student>{
         this.waitTime = advisorStartTime - arrivalTimeAtAdvisingCenter;
     }
 
-    public void setWaitTime(int waitTime) {
-        this.waitTime = waitTime;
-    }
 
     public void setMeetingDuration(int meetingDuration) {
         this.meetingDuration = meetingDuration;

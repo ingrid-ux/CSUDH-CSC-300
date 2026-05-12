@@ -2,7 +2,7 @@ public class Senior extends Student {
     private String studentID;
     Senior(int arrivalTime, AdvisingType advT){
         super(arrivalTime);
-        setStudentType("Senior");
+        setStudentType("Senior ");
         setAdvisingType(advT);
         setStudentID();
     }
@@ -10,7 +10,7 @@ public class Senior extends Student {
     @Override
     public void setStudentID() {
         idCounter++;
-        studentID = "CSUDH " + getStudentType() + " " +  Student.idCounter;
+        studentID = "CSUDH " + getStudentType() + Student.idCounter;
     }
 
     @Override
